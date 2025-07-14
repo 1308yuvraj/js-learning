@@ -15,5 +15,5 @@ console.log(accountId);
 console.table([accountId,accountEmail,accountPassword,accountCity])
 
 /*
-  Do not use var for declearing variables
+  Do not use var for declearing variables because of issue in block scope and functional scope
 */
