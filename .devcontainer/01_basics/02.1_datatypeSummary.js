@@ -3,33 +3,33 @@
 // 1. Primitive (call by value)
 // 7 types: String, Number, Boolean, null, undefined, symbol, BigInt
 
-const score = 100;
-const scoreValue  = 100.3;
+// const score = 100;
+// const scoreValue  = 100.3;
 
-const isLoggedIn = false;
-const outsideTemp = null;
-let useEmail;
+// const isLoggedIn = false;
+// const outsideTemp = null;
+// let useEmail;
 
-const id = Symbol('123');
-const anotherId = Symbol('123');
+// const id = Symbol('123');
+// const anotherId = Symbol('123');
 
-console.log(id === anotherId);
+// console.log(id === anotherId);
 
-const bigNumber = 56585785875785875n;
+// const bigNumber = 56585785875785875n;
 
 // 2. Reference/ Non primitive
 // Array, Objects, Functions
 
-const heros = ["ironman", "spiderman", "hulk"];
-let myObl = {
-    name: "Yuvraj",
-    age: 25,
-}
+// const heros = ["ironman", "spiderman", "hulk"];
+// let myObl = {
+//     name: "Yuvraj",
+//     age: 25,
+// }
 
-const myFunction = function(){
-    console.log("Hello World");
+// const myFunction = function(){
+//     console.log("Hello World");
     
-}
+// }
 
 // JavaScript is a dynamically typed language.
 // This means that:
@@ -44,4 +44,28 @@ const myFunction = function(){
 // You do not need to specify the data type of a variable when you declare it in JavaScript. 
 // The interpreter infers the type based on the value assigned.
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+// Heap (Primitive) -> we will get copy of the value
+// Stack (Non-Primitive) -> we will get reference of the value
+
+let myName = "Yuvraj";
+
+let anotherName = myName;
+
+anotherName = "Singh";
+
+console.log(anotherName);
+console.log(myName);
+
+let userOne = {
+    email: "user@gmail.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne;
+
+userTwo.email = "yuvraj@gmail.com";
+
+console.log(userOne.email);
+console.log(userTwo.email);
